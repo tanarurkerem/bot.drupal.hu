@@ -6,7 +6,7 @@ $databases = array (
     array (
       'database' => 'bot',
       'username' => 'root',
-      'password' => '',
+      'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

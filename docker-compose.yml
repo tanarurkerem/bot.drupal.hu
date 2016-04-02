@@ -5,7 +5,9 @@ web:
     - "80:80"
   volumes:
     - docroot:/var/www/bot.drupal.hu/docroot 
+  restart: always
 mysql:
   image: mysql
   environment:
     - MYSQL_ROOT_PASSWORD=root
+  restart: always
