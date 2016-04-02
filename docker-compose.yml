@@ -5,7 +5,7 @@ web:
   ports:
     - "80:80"
   volumes:
-    - docroot:/var/www/bot.drupal.hu/docroot 
+    - docroot/:/var/www/bot.drupal.hu/docroot/
   restart: always
 mysql:
   image: mysql

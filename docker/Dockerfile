@@ -1,7 +1,7 @@
 FROM debian:wheezy
 
 COPY config/php /etc/apt/preferences.d/
-COPY config/sources.list /etc/apt/
+#COPY config/sources.list /etc/apt/
 
 RUN apt-get update
 RUN apt-get install -y libapache2-mod-php5 php-apc php-pear php5 php5-cli php5-common php5-curl php5-gd php5-mcrypt php5-mysql git curl locales
@@ -15,7 +15,7 @@ RUN pear install Net_SmartIRC
 COPY config/default /etc/apache2/sites-available/
 COPY config/drush_install /root/
 
-#RUN cd /var/www && git clone https://github.com/drupalhu/bot.drupal.hu.git
+RUN cd /var/www && git clone https://github.com/drupalhu/bot.drupal.hu.git
 RUN /bin/sh /root/drush_install
 RUN mkdir /var/www/bot.drupal.hu/docroot/sites/default/files
 RUN chown www-data:www-data /var/www/bot.drupal.hu/docroot/sites/default/files
