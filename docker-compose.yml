@@ -1,6 +1,7 @@
 web:
   build: docker
-  links: mysql
+  links: 
+    - mysql
   ports:
     - "80:80"
   volumes:
