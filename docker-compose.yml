@@ -1,0 +1,11 @@
+web:
+  build: docker
+  links: mysql
+  ports:
+    - "80:80"
+  volumes:
+    - docroot:/var/www/bot.drupal.hu/docroot 
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root

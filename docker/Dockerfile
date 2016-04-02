@@ -15,7 +15,7 @@ RUN pear install Net_SmartIRC
 COPY config/default /etc/apache2/sites-available/
 COPY config/drush_install /root/
 
-RUN cd /var/www && git clone https://github.com/drupalhu/bot.drupal.hu.git
+#RUN cd /var/www && git clone https://github.com/drupalhu/bot.drupal.hu.git
 RUN /bin/sh /root/drush_install
 RUN mkdir /var/www/bot.drupal.hu/docroot/sites/default/files
 RUN chown www-data:www-data /var/www/bot.drupal.hu/docroot/sites/default/files
