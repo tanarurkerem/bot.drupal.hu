@@ -4,7 +4,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'bot',
+      'database' => 'butabot',
       'username' => 'root',
       'password' => '',
       'host' => 'localhost',
@@ -15,7 +15,7 @@ $databases = array (
   ),
 );
 $update_free_access = FALSE;
-$drupal_hash_salt = file_get_contents('/tmp/key');
+#$drupal_hash_salt = file_get_contents('/tmp/key');
 ini_set('session.gc_probability', 1);
 ini_set('session.gc_divisor', 100);
 ini_set('session.gc_maxlifetime', 200000);
